@@ -377,10 +377,10 @@ for i in unique_venues:
     fastest = df2.loc[:,'Time'].min()
     rows = [pd.Series([fastest, 100, 20,'Blue','Label_1'], index=df.columns)
 
-
+### Everything after here is playing around getting things higher up in the script to work
 # In[1]:
 
-
+"""
 while 1:
 
     menu = "What would you like to do? \n 1. Enter your ID number \n 2. Exit \n Enter an option."
@@ -405,27 +405,10 @@ while 1:
         
     else:
         print("Not a valid input. Try again.")
-        
-
-    
-
-
-# In[2]:
+       
+"""
 
 
-course_count = {'Lydiard': 7, 'Pomphrey Hill': 1}
-
-import matplotlib.pyplot as plt
-import numpy as np
-
-plt.bar(range(len(course_count)), list(course_count.values()), align='center')
-plt.xticks(range(len(course_count)), list(course_count.keys()))
-plt.title('Count of parkrun venues for ' + runner_name)
-#plt.set_xticklabels('Venue Name')
-plt.show()
-
-
-# In[ ]:
 
 
 
