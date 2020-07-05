@@ -1,13 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Feb 28 21:54:28 2020
-
-@author: Dave
-"""
-
-from bs4 import BeautifulSoup
-import requests
-
 # Wikipedia
 This was an early attempt to get data from a web page. It takes some elements from a table and converts them into a list.
 Modules:
