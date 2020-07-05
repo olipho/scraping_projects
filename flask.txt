@@ -1,0 +1,43 @@
+
+# A very simple Flask Hello World app for you to get started with...
+
+from flask import Flask
+import wikipedia
+
+app = Flask(__name__)
+
+@app.route('/', methods = ['POST','GET'])
+
+def dynamic_page():
+    return wikipedia.runScrape()
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port='8000', debug=True)
+
+
+
+
+def runScrape():
+    from bs4 import BeautifulSoup4
+    import requests
+
+    headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 5.1; rv:7.0.1) Gecko/20100101 Firefox/7.0.1'}
+
+    webpage_response = requests.get('https://en.wikipedia.org/wiki/List_of_Grand_Slam_men%27s_singles_champions', headers = headers)
+    #return webpage_response
+
+    webpage = webpage_response.content
+    soup = BeautifulSoup4(webpage, "html.parser")
+
+    My_table = soup.find('table',{'class':'wikitable sortable'})
+    links = My_table.findAll('a')
+
+    #winners = []
+    for link in links:
+        print(link.get('title'))
+    #    print(winners.append(link.get('title')))
+    #print(winners)
+
+def runElse():
+    return "hello there ya"
+
