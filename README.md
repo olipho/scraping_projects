@@ -8,27 +8,20 @@ Created on Fri Feb 28 21:54:28 2020
 from bs4 import BeautifulSoup
 import requests
 
-webpage_response = requests.get('https://en.wikipedia.org/wiki/List_of_Grand_Slam_men%27s_singles_champions')
-print(webpage_response)
+# Wikipedia
+This was an early attempt to get data from a web page. It takes some elements from a table and converts them into a list.
+Modules:
 
-webpage = webpage_response.content
-soup = BeautifulSoup(webpage, "html.parser")
+# review_scores
+Created to learn how to scrape from multiple pages and put into a single dataframe. 
+Modules: beautifulsoup, requests, pandas, ...
 
-My_table = soup.find('table',{'class':'wikitable sortable'})
-links = My_table.findAll('a')
-print(links)
+# running_data_multiple_page_scrape
+To extract my data from a well known Saturday morning running event. Creates a dataframe following scraping from multiple pages and pulling in various other elements to label graphs of data and calculate summary statistics. 
+Modules: beautifulsoup, soupstrainer, requests, pandas, re (?), itertools, matplotlib, numpy, datetime, time
+Check all above currently being used (and clear)
 
-winners = []
-for link in links:
-    winners.append(link.get('title'))
-print(winners)
-#slam_winners = soup.find_all(attrs={"class": "wikitable sortable"})
-#print(slam_winners)
 
-#winner_list = []
 
-#for r in slam_winners:
-#  winner_list.append(r.get('a'))
-#print(winner_list)
-#print(r.text)
+
 
