@@ -5,11 +5,6 @@ To extract my (and others') data from a well known Saturday morning running even
 
 This script has already had a major reworking after I originally scraped the data from a summary page as part of my profile which showed my best time for each event.  I realised that taking summary statistics of only my best times was meaningless and so needed to rework it. This followed another project where I learned to scrape several pages at once.
 
-If I had more time I would resolved some of the bugs I have detailed below, including
-- fixing the axis labelling on the graphs involving time which has been a continual challenge
-- I would like to be able to scrape all of the pages on my own profile, rather than getting a 403 error after 25 or so pages
-- A big thing would be to present this in a front end. I have played around with web frameworks (simple Flask and even simpler Django) but a free hosting service which seemed promising would only allow me to scrape from whitelisted sites. 
-
 ### Summary features
 - Uses a simple input to enter a parkrun id and then scraping that profile page creates a list which takes all of the URLs for each different parkrun they've done (you've done 3 parkruns so that's 3 links in the list)
 - Loops through the list and scrapes the person's data from each page, including their name and run data, formatting it from the unstructured soup into a dataframe. I've done this mostly by converting the data into lists and then converting into dataframe form.
@@ -31,6 +26,10 @@ How to run - currently in Jupyter Notebooks it's split into cells. I *assume* th
 - I wanted to reuse the function (DRY) I created to convert seconds and minutes but have not resolved that yet.
 - I get a 403 forbidden error when I query my own data because too many pages need to be accessed. It gets picked up as a bot after about 25 requests and I need it to do about ten more. Next step is to learn how to throttle (?) / vary the page request speed so it does not block me every time. 
 
+If I had more time I would resolved some of the bugs I have detailed below, including
+- fixing the axis labelling on the graphs involving time which has been a continual challenge
+- I would like to be able to scrape all of the pages on my own profile, rather than getting a 403 error after 25 or so pages
+- A big thing would be to present this in a front end. I have played around with web frameworks (simple Flask and even simpler Django) but a free hosting service which seemed promising would only allow me to scrape from whitelisted sites. 
 
 ## review_scores
 Created to learn how to scrape from multiple pages and put into a single dataframe. The purpose of this scrape allows me to see the most recent Pitchfork review scores showing artist and album title without having to load each page. 
