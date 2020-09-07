@@ -10,7 +10,7 @@ This script has already had a major reworking after I originally scraped the dat
 - Loops through the list and scrapes the person's data from each page, including their name and run data, formatting it from the unstructured soup into a dataframe. I've done this mostly by converting the data into lists and then converting into dataframe form.
 - Converts time to seconds to allow some statistical calculations such as mean and standard deviation then converts back to minutes and seconds
 - Plots a box and whisker diagram
-- I created a query on the dataframe to pick out runs which I did with Oliver (running with a buggy is slow so it's all the ones over a certain time and after the date he was born) although this doesn't make sense on someone else's data, hence why it's currently empty)
+- I created a query on the dataframe to pick out runs which I did with my son (running with a buggy is slow so it's all the ones over a certain time and after the date he was born) although this doesn't make sense on someone else's data, hence why it's currently empty)
 - Creating a summary table of all the person's run data (a bit like parkrun do already but I wanted to do it myself and show what data I wanted). This also involved a simple join of two tables.
 - I've then created a bar chart showing how many parkruns have been done at each venue, overlaying it with the best time for each course. 
 
