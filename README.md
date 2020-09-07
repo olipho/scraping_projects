@@ -29,7 +29,7 @@ How to run - currently in Jupyter Notebooks it's split into cells. I *assume* th
 If I had more time I would resolved some of the bugs I have detailed below, including
 - fixing the axis labelling on the graphs involving time which has been a continual challenge
 - I would like to be able to scrape all of the pages on my own profile, rather than getting a 403 error after 25 or so pages
-- A big thing would be to present this in a front end. I have played around with web frameworks (simple Flask and even simpler Django) but a free hosting service which seemed promising would only allow me to scrape from whitelisted sites. 
+- A big thing would be to present this in a front end. I have played around with web frameworks (simple Flask and even simpler Django) but a free hosting service which seemed promising would only allow me to scrape from whitelisted sites. To be continued? However, Jupyter Notebooks in Github currently gives me exactly what I need in terms of sharing my output.
 
 ## review_scores
 Created to learn how to scrape from multiple pages and put into a single dataframe. The purpose of this scrape allows me to see the most recent Pitchfork review scores showing artist and album title without having to load each page. 
