@@ -34,6 +34,9 @@ How to run - currently in Jupyter Notebooks it's split into cells. I *assume* th
 
 ## review_scores
 Created to learn how to scrape from multiple pages and put into a single dataframe. The purpose of this scrape allows me to see the most recent Pitchfork review scores showing artist and album title without having to load each page. 
+
+This was the first project I did where I successfully scraped URLs into a list and then looped through the list to scrape each page in turn. It created some (what were at the time) interesting challenges in creating different dataframe columns from data on differing pages. As with the running_data script, extracting the correct elements from a page was tricky at times, but more straight forward here in this case. 
+
 Modules: beautifulsoup, requests, pandas, ...
 
 ## Wikipedia
