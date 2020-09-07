@@ -5,7 +5,7 @@ To extract my (and others') data from a well known Saturday morning running even
 
 This script has already had a major reworking after I originally scraped the data from a summary page as part of my profile which showed my best time for each event.  I realised that taking summary statistics of only my best times was meaningless and so needed to rework it. This followed another project where I learned to scrape several pages at once.
 
-### Summary features
+### Summary of features
 - Uses a simple input to enter a parkrun id and then scraping that profile page creates a list which takes all of the URLs for each different parkrun they've done (you've done 3 parkruns so that's 3 links in the list)
 - Loops through the list and scrapes the person's data from each page, including their name and run data, formatting it from the unstructured soup into a dataframe. I've done this mostly by converting the data into lists and then converting into dataframe form.
 - Converts time to seconds to allow some statistical calculations such as mean and standard deviation then converts back to minutes and seconds
