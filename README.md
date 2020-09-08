@@ -15,7 +15,7 @@ This script has already had a major reworking after I originally scraped the dat
 - I've then created a bar chart showing how many parkruns have been done at each venue, overlaying it with the best time for each course. 
 
 ### Historic versions
-The earlier version of this used a script called parkrun_soup.py which did a rough scrape which was saved to a csv file. parkrun1.csv was then cleaned before being imported into event_summary.py after which some viualisations and summary statistics were generated. 
+The earlier version of this used a script called parkrun_soup.py which did a rough scrape which was saved to a csv file. parkrun1.csv was then cleaned before being imported into event_summary.py after which some viualisations and summary statistics were generated. One of the biggest learning points was getting from this to this being able to run this as a single script without manual cleaning. 
 
 Modules: beautifulsoup, soupstrainer, requests, pandas, re, from itertools import repeat, matplotlib, numpy, datetime, time
 
