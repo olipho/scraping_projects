@@ -14,9 +14,12 @@ This script has already had a major reworking after I originally scraped the dat
 - Creating a summary table of all the person's run data (a bit like parkrun do already but I wanted to do it myself and show what data I wanted). This also involved a simple join of two tables.
 - I've then created a bar chart showing how many parkruns have been done at each venue, overlaying it with the best time for each course. 
 
+### Historic versions
+The earlier version of this used a script called parkrun_soup.py which did a rough scrape which was saved to a csv file. parkrun1.csv was then cleaned before being imported into event_summary.py after which some viualisations and summary statistics were generated. 
+
 Modules: beautifulsoup, soupstrainer, requests, pandas, re, from itertools import repeat, matplotlib, numpy, datetime, time
 
-How to run - currently in Jupyter Notebooks it's split into cells. I *assume* this will run as a single script in any other normal IDE but this needs to be checked. 
+How to run (!) - currently in Jupyter Notebooks it's split into cells. I *assume* this will run as a single script in any other normal IDE but this needs to be checked. 
 
 ### Challenges in developing the script
 - I needed to create a tuple of parkrun years to allow me to remove the \xa0\n and \n tags from the raw data. Moreover, this then allowed me to konw where one row on the table ended and the next started, the year being used to identify when the last element in a row.  
