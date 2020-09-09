@@ -5,8 +5,6 @@ Created on Fri Feb 28 21:54:28 2020
 @author: Dave
 """
 
-#import codecademylib3_seaborn
-#import codecademylib3_seaborn
 from bs4 import BeautifulSoup
 import requests
 import re
