@@ -3,7 +3,7 @@
 ## running_data
 To extract my (and others') data from a well known Saturday morning running event. Creates a dataframe following scraping from multiple pages and pulling in various other elements to label graphs of data and calculate summary statistics. The reason I decided to start this project is because I have completed a large number of events and wanted to view my data in a way that was interesting to me.
 
-This script has already had a major reworking after I originally scraped the data from a summary page as part of my profile which showed my best time for each event.  I realised that taking summary statistics of only my best times was meaningless and so needed to rework it. This followed another project where I learned to scrape several pages at once.
+This script has already had a major reworking after I originally scraped the data from a summary page as part of my profile which showed my best time for each event.  I realised that taking summary statistics of only my best times was meaningless and so needed to rework it. This followed another project where I learned to scrape several pages at once. See Historic Versions section for more detail. 
 
 ### Summary of features
 - Uses a simple input to enter a parkrun id and then scraping that profile page creates a list which takes all of the URLs for each different parkrun they've done (you've done 3 parkruns so that's 3 links in the list)
@@ -13,10 +13,14 @@ This script has already had a major reworking after I originally scraped the dat
 - I created a query on the dataframe to pick out runs which I did with my son (running with a buggy is slow so it's all the ones over a certain time and after the date he was born) although this doesn't make sense on someone else's data, hence why it's currently empty)
 - Creating a summary table of all the person's run data (a bit like parkrun do already but I wanted to do it myself and show what data I wanted). This also involved a simple join of two tables.
 - I've then created a bar chart showing how many parkruns have been done at each venue, overlaying it with the best time for each course. 
+- Note that because it's written using Jupyter Notebooks I've left in a lot of the outputs that you wouldn't normally expect to see. The key outputs are the tables and the charts as described above.
+
+### Historic versions
+The earlier version of this used a script called parkrun_soup.py which did a rough scrape which was saved to a csv file. parkrun1.csv was then cleaned before being imported into event_summary.py after which some viualisations and summary statistics were generated. One of the biggest learning points was getting from this to this being able to run this as a single script without manual cleaning. 
 
 Modules: beautifulsoup, soupstrainer, requests, pandas, re, from itertools import repeat, matplotlib, numpy, datetime, time
 
-How to run - currently in Jupyter Notebooks it's split into cells. I *assume* this will run as a single script in any other normal IDE but this needs to be checked. 
+How to run (!) - currently in Jupyter Notebooks it's split into cells. I *assume* this will run as a single script in any other normal IDE but this needs to be checked. 
 
 ### Challenges in developing the script
 - I needed to create a tuple of parkrun years to allow me to remove the \xa0\n and \n tags from the raw data. Moreover, this then allowed me to konw where one row on the table ended and the next started, the year being used to identify when the last element in a row.  
